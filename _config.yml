@@ -1,0 +1,19 @@
+# Site settings
+title: "Caveat Implementor! Key Recovery Attacks on MEGA"
+email: ""
+description: > # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+twitter_username:
+github_username: 
+
+collections:
+  background:
+  attacks:
+  disclosure:
+  media:
+  questions:
+
+# Build settings
+markdown: kramdown
