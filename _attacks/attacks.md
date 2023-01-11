@@ -26,7 +26,7 @@ To obtain the entire private RSA key, the attack can be repeated on a block-by-b
 
 ## Attack based on small subgroups
 
-The second attack relied on how RSA decryption was carried out by the client during user authentication. It exploited a legacy artefact in the code that changed the resulting RSA plaintext length if a certain byte condition on the plaintext did not hold, in combination with an explicit error arising from a plaintext length check that was again reported to the server. The attack is a form of a [small order subgroup attack](https://doi.org/10.1007/BFb005224), in that it relies on the ECB encryption oracle to overwrite the RSA primes $$ p, q $$ with values such that $$ (p − 1)(q − 1) $$ has known small prime factors. This forced the client's decryption to take place in one of several small subgroups. 
+The second attack relied on how RSA decryption was carried out by the client during user authentication. It exploited a legacy artefact in the code that changed the resulting RSA plaintext length if a certain byte condition on the plaintext did not hold, in combination with an explicit error arising from a plaintext length check that was again reported to the server. The attack is a form of a [small order subgroup attack](https://doi.org/10.1007/BFb005224), in that it relies on the ECB encryption oracle to overwrite the RSA primes $$ p, q $$ with values such that $$ (p − 1)(q − 1) $$ has known small prime factors. This forces the client's decryption to take place in one of several small subgroups. 
 
 The attack also overwrites the user's private key value $$ d $$ with a value that is completely
 known except in the target plaintext block. Then, the malicious server could use the length check oracle
