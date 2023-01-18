@@ -3,7 +3,7 @@ title: Attacks
 html-id: attacks
 ---
 
-We discovered an ECB encryption oracle under a target user's master key in the MEGA system. The oracle arised in the MEGAdrop feature, which was supposed to be independent of the authentication protocol, yet used the
+We discovered an ECB encryption oracle under a target user's master key in the MEGA system. The oracle arises in the MEGAdrop feature, which is supposed to be independent of the authentication protocol, yet uses the
 same master key. This oracle provided an adversary with the ability to partially overwrite a target user's RSA private key with chosen data, a powerful capability that we use in our attacks.
 
 Our attacks allow an adversary to decrypt blocks encrypted using AES-ECB under the target user's master key. In the MEGA infrastructure, this enables an attacker to recover blocks of the target user's RSA private key. To recover the entire key, running either of our attacks to get four specific blocks is sufficient when combined with lattice techniques. Once the private key is recovered, the adversary could trivially recover the keys needed to decrypt any files shared with the target user as well as recover individual file encryption keys directly.
