@@ -1,6 +1,6 @@
 # Caveat Implementor! Key Recovery Attacks on MEGA
 
-This repository contains the source code for [our website](https://tera.github.io).
+This repository contains the source code for [our website](https://mega-caveat.github.io).
 
 ## Authors
 
